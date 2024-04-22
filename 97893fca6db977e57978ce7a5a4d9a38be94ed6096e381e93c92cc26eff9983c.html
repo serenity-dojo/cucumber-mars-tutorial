@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8"/>
-    <title>Capabilities</title>
+    <title>Features</title>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
@@ -154,7 +154,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [{"text":"Mars","type":"capability","href":"b3253c56e45d55d3b345b9f1a17e237594b3a192eaa913e9c3757f4f302a79a6.html","nodes":[{"text":"Promotional Codes","type":"feature","href":"97893fca6db977e57978ce7a5a4d9a38be94ed6096e381e93c92cc26eff9983c.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-check-circle-fill success-icon \u0027 title\u003d\u0027SUCCESS\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e2 scenarios\u003c/span\u003e, \u003cspan class\u003d\u0027feature-count\u0027\u003e2 test cases\u003c/span\u003e"]}],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-check-circle-fill success-icon \u0027 title\u003d\u0027SUCCESS\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e1 feature\u003c/span\u003e "]}];
+            var requirementsTree = [{"text":"Promotional Codes","type":"feature","href":"97893fca6db977e57978ce7a5a4d9a38be94ed6096e381e93c92cc26eff9983c.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-check-circle-fill success-icon \u0027 title\u003d\u0027SUCCESS\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e2 scenarios\u003c/span\u003e, \u003cspan class\u003d\u0027feature-count\u0027\u003e2 test cases\u003c/span\u003e"]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -201,9 +201,10 @@
             <span class="breadcrumbs">
             <a href='index.html'>Home</a> > <a href="capabilities.html">Requirements</a>
 
+                > <a href="b3253c56e45d55d3b345b9f1a17e237594b3a192eaa913e9c3757f4f302a79a6.html">Mars</a>
 
 
-                    > <span class="truncate-40">Mars</span>
+                    > <span class="truncate-40">Promotional codes</span>
 
             </span>
         </div>
@@ -221,11 +222,11 @@
         <li >
             <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
         </li>
-        <li class="active">
-            <a href="#"><i class="bi bi-chat-text"></i> Capabilities</a>
-        </li>
         <li >
-            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="bi bi-chat-text"></i> Capabilities</a>
+        </li>
+        <li class="active">
+            <a href="#"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
     <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 22-04-2024 20:09</span>
@@ -245,14 +246,26 @@
 
                                     <div class="col-sm-12">
                                         <span>
-                                            <h2><i class="bi bi-book"></i> Capability: Mars</h2>
+                                            <h2><i class="bi bi-book"></i> Feature: Promotional codes</h2>
                                         </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                             <div class="requirementNarrativeTitle">
-                                
+                                As a MarsAir Sales Director (Mark)<br />
+I want to distribute promotional codes to customers<br />
+So that they get discounts and are more tempted to purchase tickets</p>
+<p>Acceptance criteria<br />
+Promotional codes are in the format XX9-XXX-999.<br />
+Characters are all random.<br />
+The first digit indicates the discount percentage (2 = 20%, 3 = 30% etc).<br />
+The next two digits are random.<br />
+The final digit is a check digit; it is equal to the sum of all other digits modulo 10, eg:</p>
+<p>AF3-FJK-41?: 3 + 4 + 1 = 8, so the complete promotional code is AF3-FJK-418<br />
+JJ5-OPQ-32?: 5 + 3 + 2 = 10, so the complete promotional code is JJ5-OPQ-320</p>
+<p>When a valid code is entered, the search result should have a “Promotional code [code] used: [discount]% discount!” message.<br />
+Otherwise, show “Sorry, code [invalid promo code] is not valid”.
                             </div>
 
                     </div>
@@ -288,80 +301,195 @@
 
                                             </div>
                                             <div class="col-sm-8">
-                                                <h3>Requirements Overview</h3>
+                                                <!--- TOC --->
+                                                <div id="toc">
+                                                    <h3>Overview</h3>
+                                                    <table class="table" id="toc-table">
+                                                                <tr>
+                                                                    <td class="rule-toc-entry" colspan="2">
+                                                                        <a href="#7d41ca2d-406c-408f-8417-87fed76f4b97"
+                                                                           title="View scenario details for this rule">
+                                                                            Rule: Valid codes are in format XX9-XXX-999
+                                                                    </td>
+                                                                </tr>
+                                                                    <tr>
+                                                                        <td style="width:95%;" class="toc-title">
+                                                                            <span class="scenario-toc-entry">
+                                                                                    <a href="#cec2d71c1dc1829d61f27fa6f07309d02e9df6fb7b4131f22e8803a0737127d5"
+                                                                                       title="View scenario details">
+                                                                                        <i class="bi bi-chat-dots"></i> Scenario Outline: Martin wants to book a flight to Mars, applying their promo code
+                                                                                    </a>
+                                                                                        (1 example)
+                                                                                </span>
+                                                                        </td>
+                                                                        <td>
 
-                                                <div id="tree"></div>
+                                                                        </td>
+                                                                        <td style="width:5%;">
+                                                                            <table>
+                                                                                <tr>
+                                                                                    <td class="icons-bar">
+                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                           href="20b8651fd2e8a987c6eae31547c03f3cdf13ef5285a9927fac9ddff5e1271ff8.html"
+                                                                                           title="View test results">
+                                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                                                                            </a>
 
-                                                <!-- STATS -->
-    <div>
-        <h3><i class="bi bi-speedometer2"></i> Key Statistics</h3>
-        <div>
-            <table class="table table-striped table-hover">
-                <tbody>
-                <tr scope="row">
-                    <td>
-                        <i class="bi bi-card-checklist"></i> Number of Scenarios
-                    </td>
-                    <td>2</td>
-                </tr>
-                <tr scope="row">
-                    <td>
-                        <i class="bi bi-caret-right"></i> Total Number of Test Cases
-                    </td>
-                    <td>2</td>
-                </tr>
-                <tr scope="row">
-                    <td>
-                        <i class="bi bi-flag-fill"></i> Tests Started
-                    </td>
-                    <td>Apr 22, 2024 20:09:36</td>
-                </tr>
-                <tr scope="row">
-                    <td>
-                        <i class="bi bi-stop-circle"></i> Tests
-                        Finished
-                    </td>
-                    <td>Apr 22, 2024 20:09:51</td>
-                </tr>
-                <tr scope="row">
-                    <td>
-                        <i class="bi bi-stopwatch"></i> Total
-                        Duration
-                    </td>
-                    <td>15s</td>
-                </tr>
-                <tr scope="row">
-                    <td>
-                        <i class="bi bi-trophy"></i> Fastest Test
-                    </td>
-                    <td>15s</td>
-                </tr>
-                <tr scope="row">
-                    <td>
-                        <i class="bi bi-skip-start"></i> Slowest
-                        Test
-                    </td>
-                    <td>15s</td>
-                </tr>
-                <tr scope="row">
-                    <td>
-                        <i class="bi bi-stopwatch"></i> Average
-                        Execution Time
-                    </td>
-                    <td>15s</td>
-                </tr>
-                <tr scope="row">
-                    <td>
-                        <i class="bi bi-stopwatch-fill"></i> Total
-                        Execution Time
-                    </td>
-                    <td>31s</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-                                                <!-- END STATS -->
+
+                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                               href="20b8651fd2e8a987c6eae31547c03f3cdf13ef5285a9927fac9ddff5e1271ff8.html"
+                                                                                               title="View test results">
+                                                                                                <i class="bi bi-eyeglasses"></i>
+                                                                                            </a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                <tr>
+                                                                    <td class="rule-toc-entry" colspan="2">
+                                                                        <a href="#5cec849f-e423-46fd-a623-658fb29ce4be"
+                                                                           title="View scenario details for this rule">
+                                                                            Rule: Invalid codes
+                                                                    </td>
+                                                                </tr>
+                                                                    <tr>
+                                                                        <td style="width:95%;" class="toc-title">
+                                                                            <span class="scenario-toc-entry">
+                                                                                    <a href="#d399e50404a9e4a62bdf8ab5aaf15bf6b1602c65209da79c4fad9240d5e2a74e"
+                                                                                       title="View scenario details">
+                                                                                        <i class="bi bi-chat-dots"></i> Scenario Outline: Martin wants to book a flight to Mars
+                                                                                    </a>
+                                                                                        (1 example)
+                                                                                </span>
+                                                                        </td>
+                                                                        <td>
+
+                                                                        </td>
+                                                                        <td style="width:5%;">
+                                                                            <table>
+                                                                                <tr>
+                                                                                    <td class="icons-bar">
+                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                           href="60adbfcb81ec19e3f12f0b969ebafbddef8ff63af23a2f6f22f228bb43c2eb9e.html"
+                                                                                           title="View test results">
+                                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                                                                            </a>
+
+
+                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                               href="60adbfcb81ec19e3f12f0b969ebafbddef8ff63af23a2f6f22f228bb43c2eb9e.html"
+                                                                                               title="View test results">
+                                                                                                <i class="bi bi-eyeglasses"></i>
+                                                                                            </a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                    </table>
+                                                </div>
+                                                <!--- END OF TOC --->
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h3>Scenarios</h3>
+
+                                                    <a name="7d41ca2d-406c-408f-8417-87fed76f4b97"></a>
+                                                        <div class="rule-title">
+                                                            Rule: Valid codes are in format XX9-XXX-999</div>
+                                                    <p class="rule-tags inline-tag">
+                                                    </p>
+
+
+                                                        <div class="scenario-docs card" id="cec2d71c1dc1829d61f27fa6f07309d02e9df6fb7b4131f22e8803a0737127d5">
+                                                            <div class="scenario-docs card-header success"
+                                                                 style="min-height:1.5em;">
+                                                                <div>
+                                                                        <span class="scenario-heading">
+                                                                            <a href="20b8651fd2e8a987c6eae31547c03f3cdf13ef5285a9927fac9ddff5e1271ff8.html"
+                                                                               title="View test results">Scenario Outline: Martin wants to book a flight to Mars, applying their promo code</a>
+                                                                        </span>
+
+                                                                        <span class="example-tags inline-tag">
+                                                                        </span>
+
+                                                                    <span class="scenario-result-icon">
+                                                                    
+
+                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                                                        </span>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="scenario-docs card-body">
+                                                                    <p>Given Martin is on the MarsAir homepage</p>
+                                                                    <p>When he looks for an available flight using promo code &quot;{Code}&quot;</p>
+                                                                    <p>Then he should be told the discount amount  is {DiscountPercent}%</p>
+                                                                <div class="examples">
+                                                                        <p><p>Examples: Valid Codes</p>
+<blockquote>
+</blockquote>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>Code</th><th>DiscountPercent</th><th> </th></tr>
+</thead>
+<tbody>
+<tr><td>AF3-FJK-418</td><td>30</td><td><a href='20b8651fd2e8a987c6eae31547c03f3cdf13ef5285a9927fac9ddff5e1271ff8.html#beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a></td></tr>
+</tbody>
+</table></div>
+</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    <a name="5cec849f-e423-46fd-a623-658fb29ce4be"></a>
+                                                        <div class="rule-title">
+                                                            Rule: Invalid codes</div>
+                                                    <p class="rule-tags inline-tag">
+                                                    </p>
+
+
+                                                        <div class="scenario-docs card" id="d399e50404a9e4a62bdf8ab5aaf15bf6b1602c65209da79c4fad9240d5e2a74e">
+                                                            <div class="scenario-docs card-header success"
+                                                                 style="min-height:1.5em;">
+                                                                <div>
+                                                                        <span class="scenario-heading">
+                                                                            <a href="60adbfcb81ec19e3f12f0b969ebafbddef8ff63af23a2f6f22f228bb43c2eb9e.html"
+                                                                               title="View test results">Scenario Outline: Martin wants to book a flight to Mars</a>
+                                                                        </span>
+
+                                                                        <span class="example-tags inline-tag">
+                                                                        </span>
+
+                                                                    <span class="scenario-result-icon">
+                                                                    
+
+                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                                                        </span>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="scenario-docs card-body">
+                                                                    <p>Given Martin is on the MarsAir homepage</p>
+                                                                    <p>When he looks for an available flight using promo code &quot;{Code}&quot;</p>
+                                                                    <p>Then he should be told the code is invalid</p>
+                                                                <div class="examples">
+                                                                        <p><p>Examples: Invalid codes</p>
+<blockquote>
+</blockquote>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>Code</th><th> </th></tr>
+</thead>
+<tbody>
+<tr><td>AF3-FJK-OOO</td><td><a href='60adbfcb81ec19e3f12f0b969ebafbddef8ff63af23a2f6f22f228bb43c2eb9e.html#beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a></td></tr>
+</tbody>
+</table></div>
+</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                             </div>
                                         </div>
                                     </div>
@@ -480,25 +608,7 @@
                                                         <tbody>
                                                                 <tr class="scenario-result SUCCESS">
                                                                     <td>
-                                                                            <a href="97893fca6db977e57978ce7a5a4d9a38be94ed6096e381e93c92cc26eff9983c.html">Promotional Codes</a>
-                                                                    </td>
-                                                                    <td>
-                                                                        <i class="bi bi-table" title="Data Driven Scenario"> <a href="60adbfcb81ec19e3f12f0b969ebafbddef8ff63af23a2f6f22f228bb43c2eb9e.html">Martin wants to book a flight to Mars</a>
-                                                                            <br/>
-                                                                                <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> 1 passing test case
-                                                                                <br/>
-                                                                    </td>
-                                                                    <td><span class='context-icon'><i class='bi bi-browser-chrome' title='Chrome'></i> <i class='bi bi-ubuntu' title='Linux'></i></span><span style="display:none">Chrome,linux</span>
-                                                                    </td>
-                                                                    <td>3</td>
-                                                                    <td>20:09:36</td>
-                                                                    <td>15s 114ms</td>
-                                                                    <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span style="display:none">SUCCESS</span>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="scenario-result SUCCESS">
-                                                                    <td>
-                                                                            <a href="97893fca6db977e57978ce7a5a4d9a38be94ed6096e381e93c92cc26eff9983c.html">Promotional Codes</a>
+                                                                            <a href="#">Promotional Codes</a>
                                                                     </td>
                                                                     <td>
                                                                         <i class="bi bi-table" title="Data Driven Scenario"> <a href="20b8651fd2e8a987c6eae31547c03f3cdf13ef5285a9927fac9ddff5e1271ff8.html">Martin wants to book a flight to Mars, applying their promo code</a>
@@ -511,6 +621,24 @@
                                                                     <td>3</td>
                                                                     <td>20:09:36</td>
                                                                     <td>15s 913ms</td>
+                                                                    <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span style="display:none">SUCCESS</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="scenario-result SUCCESS">
+                                                                    <td>
+                                                                            <a href="#">Promotional Codes</a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <i class="bi bi-table" title="Data Driven Scenario"> <a href="60adbfcb81ec19e3f12f0b969ebafbddef8ff63af23a2f6f22f228bb43c2eb9e.html">Martin wants to book a flight to Mars</a>
+                                                                            <br/>
+                                                                                <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> 1 passing test case
+                                                                                <br/>
+                                                                    </td>
+                                                                    <td><span class='context-icon'><i class='bi bi-browser-chrome' title='Chrome'></i> <i class='bi bi-ubuntu' title='Linux'></i></span><span style="display:none">Chrome,linux</span>
+                                                                    </td>
+                                                                    <td>3</td>
+                                                                    <td>20:09:36</td>
+                                                                    <td>15s 114ms</td>
                                                                     <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span style="display:none">SUCCESS</span>
                                                                     </td>
                                                                 </tr>
@@ -572,14 +700,14 @@
 
         // Options define for display value on top of bars
         const outcomeDetailsReports = [
-            { title: 'Passing Test Cases', link: "d73bb148721be868992aee21d43b2098dceb7aa3bb140190b49b3190571c04a5.html" },
-            { title: 'Pending Test Cases', link: "1339408b180c420c21b3fb5d03949777a035d96fd8cbabebc0cd4cc9e3a77206.html" },
-            { title: 'Ignored Test Cases', link: "01887eb0525e292b703eaf64e6ace55d2389a0a213eb01075e591984e858ffb4.html" },
-            { title: 'Skipped Test Cases', link: "f0307df30f48561bb24945d411208e4b947b6ebf2518898a0e51399f88193b65.html" },
-            { title: 'Aborted Test Cases',  link: "ce6b42ff9a15f992ca050956b772b6e8e9dd66687a4d7e38f42943f3353e4777.html"},
-            { title: 'Failed Test Cases', link: "791d95a97d08f6a9ca013a1d59cd3c9cb05168715609c947b4c4019fa9e28d51.html"  },
-            { title: 'Broken Test Cases', link: "e1170fb7b462893727d434e0615c0b3849b1e60bf9c7c2bb40fdcfd6f76c20ae.html"    },
-            { title: 'Compromised Test Cases',  link: "6106550d713bc2164bd5e903059d3261f535e5dc7c5029419fa43c54cafd2607.html" },
+            { title: 'Passing Test Cases', link: "10497fdec1e4d017719a7544c5e016c3ee5f4e7e6d619e2fa1bba5e5b8f5879a.html" },
+            { title: 'Pending Test Cases', link: "f4cd09b92a47f4ff80ea10c32c21d99daf20993668fe8dfc0b6d04a48cff3a48.html" },
+            { title: 'Ignored Test Cases', link: "bc988431646ef9caa0914a3532b92fc67e83da22b0d0409f92f9bd44788c7d22.html" },
+            { title: 'Skipped Test Cases', link: "ffd733a75ca782fc22b7251a32c978680b38c3184218ede44282f3272cf23e2d.html" },
+            { title: 'Aborted Test Cases',  link: "5d0cf3a47b58b158dc09602635b9e1fbaf6f6e511892c0aae3383e951cb4375a.html"},
+            { title: 'Failed Test Cases', link: "71b9edefc4500928eff9dfea3451c4f662df4e1f072f1d0ec474b7382e59a083.html"  },
+            { title: 'Broken Test Cases', link: "d15604a672da5ab5d7edc46d0b04c0196593d5125475ffe40d129467f9398dbc.html"    },
+            { title: 'Compromised Test Cases',  link: "9d7de1900917bb63937d067981a6d056d5ae81d20d987959ff812bb4a260d8b8.html" },
         ]
         const outcomeData = {
             labels: ['Passing Test Cases', 'Pending Test Cases', 'Ignored Test Cases', 'Skipped Test Cases', 'Aborted Test Cases', 'Failed Test Cases', 'Broken Test Cases', 'Compromised Test Cases','Undefined Test Cases'],
@@ -666,14 +794,14 @@
 
         // Options define for display value on top of bars
         const requirementsOutcomeDetailsReports = [
-            { title: 'Passing Test Cases', link: "d73bb148721be868992aee21d43b2098dceb7aa3bb140190b49b3190571c04a5.html" },
-            { title: 'Pending Test Cases', link: "1339408b180c420c21b3fb5d03949777a035d96fd8cbabebc0cd4cc9e3a77206.html" },
-            { title: 'Ignored Test Cases', link: "01887eb0525e292b703eaf64e6ace55d2389a0a213eb01075e591984e858ffb4.html" },
-            { title: 'Skipped Test Cases', link: "f0307df30f48561bb24945d411208e4b947b6ebf2518898a0e51399f88193b65.html" },
-            { title: 'Aborted Test Cases',  link: "ce6b42ff9a15f992ca050956b772b6e8e9dd66687a4d7e38f42943f3353e4777.html"},
-            { title: 'Failed Test Cases', link: "791d95a97d08f6a9ca013a1d59cd3c9cb05168715609c947b4c4019fa9e28d51.html"  },
-            { title: 'Broken Test Cases', link: "e1170fb7b462893727d434e0615c0b3849b1e60bf9c7c2bb40fdcfd6f76c20ae.html"    },
-            { title: 'Compromised Test Cases',  link: "6106550d713bc2164bd5e903059d3261f535e5dc7c5029419fa43c54cafd2607.html" },
+            { title: 'Passing Test Cases', link: "10497fdec1e4d017719a7544c5e016c3ee5f4e7e6d619e2fa1bba5e5b8f5879a.html" },
+            { title: 'Pending Test Cases', link: "f4cd09b92a47f4ff80ea10c32c21d99daf20993668fe8dfc0b6d04a48cff3a48.html" },
+            { title: 'Ignored Test Cases', link: "bc988431646ef9caa0914a3532b92fc67e83da22b0d0409f92f9bd44788c7d22.html" },
+            { title: 'Skipped Test Cases', link: "ffd733a75ca782fc22b7251a32c978680b38c3184218ede44282f3272cf23e2d.html" },
+            { title: 'Aborted Test Cases',  link: "5d0cf3a47b58b158dc09602635b9e1fbaf6f6e511892c0aae3383e951cb4375a.html"},
+            { title: 'Failed Test Cases', link: "71b9edefc4500928eff9dfea3451c4f662df4e1f072f1d0ec474b7382e59a083.html"  },
+            { title: 'Broken Test Cases', link: "d15604a672da5ab5d7edc46d0b04c0196593d5125475ffe40d129467f9398dbc.html"    },
+            { title: 'Compromised Test Cases',  link: "9d7de1900917bb63937d067981a6d056d5ae81d20d987959ff812bb4a260d8b8.html" },
             { title: 'Undefined Test Cases',  link: "" },
         ]
         const requirementsOutcomeData = {
@@ -763,14 +891,14 @@
         // Options define for display value on top of bars
 
         const severityDetailsReports = [
-            { title: 'Passing Scenarios', link: "d73bb148721be868992aee21d43b2098dceb7aa3bb140190b49b3190571c04a5.html" },
-            { title: 'Pending Scenarios', link: "1339408b180c420c21b3fb5d03949777a035d96fd8cbabebc0cd4cc9e3a77206.html" },
-            { title: 'Ignored Scenarios', link: "01887eb0525e292b703eaf64e6ace55d2389a0a213eb01075e591984e858ffb4.html" },
-            { title: 'Skipped Scenarios', link: "f0307df30f48561bb24945d411208e4b947b6ebf2518898a0e51399f88193b65.html" },
-            { title: 'Aborted Scenarios',  link: "ce6b42ff9a15f992ca050956b772b6e8e9dd66687a4d7e38f42943f3353e4777.html"},
-            { title: 'Failed Scenarios', link: "791d95a97d08f6a9ca013a1d59cd3c9cb05168715609c947b4c4019fa9e28d51.html"  },
-            { title: 'Broken Scenarios', link: "e1170fb7b462893727d434e0615c0b3849b1e60bf9c7c2bb40fdcfd6f76c20ae.html"    },
-            { title: 'Compromised Scenarios',  link: "6106550d713bc2164bd5e903059d3261f535e5dc7c5029419fa43c54cafd2607.html" },
+            { title: 'Passing Scenarios', link: "10497fdec1e4d017719a7544c5e016c3ee5f4e7e6d619e2fa1bba5e5b8f5879a.html" },
+            { title: 'Pending Scenarios', link: "f4cd09b92a47f4ff80ea10c32c21d99daf20993668fe8dfc0b6d04a48cff3a48.html" },
+            { title: 'Ignored Scenarios', link: "bc988431646ef9caa0914a3532b92fc67e83da22b0d0409f92f9bd44788c7d22.html" },
+            { title: 'Skipped Scenarios', link: "ffd733a75ca782fc22b7251a32c978680b38c3184218ede44282f3272cf23e2d.html" },
+            { title: 'Aborted Scenarios',  link: "5d0cf3a47b58b158dc09602635b9e1fbaf6f6e511892c0aae3383e951cb4375a.html"},
+            { title: 'Failed Scenarios', link: "71b9edefc4500928eff9dfea3451c4f662df4e1f072f1d0ec474b7382e59a083.html"  },
+            { title: 'Broken Scenarios', link: "d15604a672da5ab5d7edc46d0b04c0196593d5125475ffe40d129467f9398dbc.html"    },
+            { title: 'Compromised Scenarios',  link: "9d7de1900917bb63937d067981a6d056d5ae81d20d987959ff812bb4a260d8b8.html" },
         ]
         const severityData = {
             labels: ['Passing', 'Pending', 'Ignored', 'Skipped', 'Aborted', 'Failed', 'Broken', 'Compromised'],
@@ -841,14 +969,14 @@
 
         // Options define for display value on top of bars
         const durationDetailsReports = [
-                {title: "Under 1 second", link: "88f6243b5470d0cf3036531cada0b4a4f1783325c6bc9d957485ab7adea28cb9.html"},
-                {title: "1 to 10 seconds", link: "39dbe52ffe36a6b53c4516b3fa0a299472925c09654cb5f2e0679aa80dd3b0fd.html"},
-                {title: "10 to 30 seconds", link: "91dd8636c140cd1bd75ccb9d8c76022150a9049f3fc31de8dc348a00cd5f1565.html"},
-                {title: "30 to 60 seconds", link: "874577506d6921a408174b1ce0af6ee8d8c7bae6686201880005e925f748dd13.html"},
-                {title: "1 to 2 minutes", link: "5940c6a966a9d431edf7324b6a20dc582b407d606846195766aae0a9668819be.html"},
-                {title: "2 to 5 minutes", link: "f187fede1cee328c27646ca3b9ae1bb20b0a50607de487bea92ec69a4e5c4bb9.html"},
-                {title: "5 to 10 minutes", link: "4683939e2455da50bace264e627c88d9ee356153c59f3203198e123f556ddc24.html"},
-                {title: "10 minutes or over", link: "54373add78e6b7854d505035fc24e3c114e1718b4ea7a88efe5ad28965f59869.html"},
+                {title: "Under 1 second", link: "95d0dddcc4fc358cf6aad538e845a5ee8c4d4ae5c40bc73b2bb10a601d6da462.html"},
+                {title: "1 to 10 seconds", link: "c08b0463086b8fc8fe24f5d41aa5d86b9d015074bf4f25913471fd8e9627f677.html"},
+                {title: "10 to 30 seconds", link: "26aac43fd347b684b1e31d440202ef706694f0c91387e2653402f5d9aa1c4d3e.html"},
+                {title: "30 to 60 seconds", link: "be5206fb70afce4e903e91bfd5204ca4838a211aa19a67145440d473d8290083.html"},
+                {title: "1 to 2 minutes", link: "d3df259f42adb726f855d9b3fbed3d9bb501a8bfd6b686b39f3075eff9267af0.html"},
+                {title: "2 to 5 minutes", link: "483ca1aa77bf4d6d5c149a69d90b5cce61348b521f00d43afd5d9221664ca84f.html"},
+                {title: "5 to 10 minutes", link: "f74e3a83a695474a0aaf29d2780dfef058a488d1cef13a0642cab4ed02090d2a.html"},
+                {title: "10 minutes or over", link: "e34976b0641f35c127b7a5faed44e2eb541e2245e55b00ea928af683251beb1d.html"},
         ]
         // The Severity bar chart
         const durationChartCtx = document.getElementById('durationChart');

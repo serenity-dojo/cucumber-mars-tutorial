@@ -121,6 +121,10 @@
         <span class="breadcrumbs">
             <a href="index.html" class="breadcrumbs">Home</a>
 
+ <!-- inflection.of(breadcrumb.displayName).asATitle()-->
+            > <a href="b3253c56e45d55d3b345b9f1a17e237594b3a192eaa913e9c3757f4f302a79a6.html">Mars</a>
+ <!-- inflection.of(breadcrumb.displayName).asATitle()-->
+            > <a href="97893fca6db977e57978ce7a5a4d9a38be94ed6096e381e93c92cc26eff9983c.html">Promotional Codes</a>
         > Martin wants to book a flight to mars
         </span>
         </div>
@@ -159,9 +163,10 @@
                         <td>
                                 <div>
                                     <h3 class="discreet-story-header">
-                                        <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
-                                        <span class="story-header-title">Search Flights To Mars</span>
+                                        <i class="fs-2 bi bi-chat-left-quote title-icon"></i>
+                                        <span class="story-header-title">Promotional Codes </span>
                                     </h3>
+
                                 </div>
 
                         </td>
@@ -171,13 +176,6 @@
                                     <i class="bi bi-tag-fill"></i>&nbsp;
                                         <a class="tagLink" style="background:default;"
                                            href="34658a1663fcf042bd7acb3325affbe4e647c8acd84d0228be2f52e1381e61b9.html">10 To 30 Seconds
-                                              (Duration)
-                                        </a>
-                                </span>
-                                    <span class="badge example-tag tag-badge" style="background:default;">
-                                    <i class="bi bi-tag-fill"></i>&nbsp;
-                                        <a class="tagLink" style="background:default;"
-                                           href="2a5b6a7be0f08df02d8ab0b4d4c68648c2695c6c7ef0658c71de4d42b1415b18.html">Under 1 Second
                                               (Duration)
                                         </a>
                                 </span>
@@ -215,14 +213,14 @@
     <div class="story-title">
         <h3 class="story-header">Scenario Outline</h3>
 
-        <div class="scenario">Given Martin is on the MarsAir homepage<br>When he looks for available flights for the following dates:<br><table class='embedded'><thead><th>Departure</th><th>Return</th></thead><tbody><tr><td>&lt;Departure&gt;</td><td>&lt;Return&gt;</td></tr></tbody></table><br>Then he should be told "&lt;Expected Result&gt;"</div>
+        <div class="scenario">Given Martin is on the MarsAir homepage<br>When he looks for an available flight using promo code "&lt;Code&gt;"<br>Then he should be told the code is invalid</div>
 
     </div>
 
 <div id="beforetable"></div>
 
 
-        <h3 class="story-header">Examples:&nbsp;Seats available</h3>
+        <h3 class="story-header">Examples:&nbsp;Invalid codes</h3>
             <div class="requirementNarrative"></div>
 
 
@@ -234,100 +232,14 @@
                 <thead>
                 <tr>
                     <th>#</th>
-                        <th>Departure</th>
-                        <th>Return</th>
-                        <th>Expected Result</th>
+                        <th>Code</th>
                 </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td class="test-SUCCESS"><a href="#0">1</a></td>
                             <td class="test-SUCCESS"><a
-                                        href="#0">July</a>
-                            </td>
-                            <td class="test-SUCCESS"><a
-                                        href="#0">December (two years from now)</a>
-                            </td>
-                            <td class="test-SUCCESS"><a
-                                        href="#0">Call now on 0800 MARSAIR to book!</a>
-                            </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <h3 class="story-header">Examples:&nbsp;No more seats left</h3>
-            <div class="requirementNarrative"></div>
-
-
-            <p class="example-tag">
-            </p>
-
-        <div class="example-table test-report">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>#</th>
-                        <th>Departure</th>
-                        <th>Return</th>
-                        <th>Expected Result</th>
-                </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="test-UNDEFINED"><a href="#1">2</a></td>
-                            <td class="test-UNDEFINED"><a
-                                        href="#1">July</a>
-                            </td>
-                            <td class="test-UNDEFINED"><a
-                                        href="#1">July (next year)</a>
-                            </td>
-                            <td class="test-UNDEFINED"><a
-                                        href="#1">Sorry, there are no more seats available.</a>
-                            </td>
-                    </tr>
-                    <tr>
-                        <td class="test-UNDEFINED"><a href="#2">3</a></td>
-                            <td class="test-UNDEFINED"><a
-                                        href="#2">December</a>
-                            </td>
-                            <td class="test-UNDEFINED"><a
-                                        href="#2">December (next year)</a>
-                            </td>
-                            <td class="test-UNDEFINED"><a
-                                        href="#2">Sorry, there are no more seats available.</a>
-                            </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <h3 class="story-header">Examples:&nbsp;Invalid return dates</h3>
-            <div class="requirementNarrative"></div>
-
-
-            <p class="example-tag">
-            </p>
-
-        <div class="example-table test-report">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>#</th>
-                        <th>Departure</th>
-                        <th>Return</th>
-                        <th>Expected Result</th>
-                </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="test-UNDEFINED"><a href="#3">4</a></td>
-                            <td class="test-UNDEFINED"><a
-                                        href="#3">July</a>
-                            </td>
-                            <td class="test-UNDEFINED"><a
-                                        href="#3">December</a>
-                            </td>
-                            <td class="test-UNDEFINED"><a
-                                        href="#3">Unfortunately, this schedule is not possible. Please try again.</a>
+                                        href="#0">AF3-FJK-OOO</a>
                             </td>
                     </tr>
                 </tbody>
@@ -367,7 +279,7 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                style="display:block;">
                                 <span class="top-level-step">
-                                                Given Martin is on the MarsAir homepage
+                                                1: Martin wants to book a flight to Mars ({Code=AF3-FJK-OOO})
                                         </span>
                             </a>
                             <span class="evidence">
@@ -376,7 +288,7 @@
                     </td>
 
                     <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">11s 684ms</span></td>
+                    <td width="100"><span class="top-level-step">15s 114ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -385,7 +297,37 @@
 
                     <td width="70" class="step-icon">
                         <a name="0-0"></a>
-                            <span style="margin-left: 40px;"
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-0 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                Given Martin is on the MarsAir homepage
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">11s 640ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="0-0-0"></a>
+                            <span style="margin-left: 60px;"
                                   class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
                                 </span>
                     </td>
@@ -401,7 +343,7 @@
                     </td>
 
                     <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">10s 949ms</span></td>
+                    <td width="100"><span class="nested-group-step">10s 906ms</span></td>
                 </tr>
 
                             </table>
@@ -409,52 +351,56 @@
                     </tr>
                 <tr class="test-SUCCESS">
 
-                    <td width="50" class="step-icon">
-                        <a name="1"></a>
-                            <span style="margin-left: 20px;"
-                                  class="top-level-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                    <td width="70" class="step-icon">
+                        <a name="0-1"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
-                                <span class="top-level-step">
-                                                When he wants to look for available flights
+                                <span class="nested-group-step">
+                                                When he looks for an available flight using promo code "AF3-FJK-OOO"
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step"></span></td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">2s 285ms</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
 
-                    <td width="50" class="step-icon">
-                        <a name="2"></a>
-                            <span style="margin-left: 20px;"
-                                  class="top-level-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                    <td width="70" class="step-icon">
+                        <a name="0-2"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
-                                <span class="top-level-step">
-                                                Then he should be able to specify the departure and return months that he wants to travel
+                                <span class="nested-group-step">
+                                                Then he should be told the code is invalid
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">819ms</span></td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">724ms</span></td>
                 </tr>
+
+                            </table>
+                        </td>
+                    </tr>
             <tr class="test-SUCCESS">
                     <td colspan="2"></td>
                 <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                <td width="100"><span class="top-level-step"><em>12.51s</em></span></td>
+                <td width="100"><span class="top-level-step"><em>15.11s</em></span></td>
             </tr>
 
         </table>
