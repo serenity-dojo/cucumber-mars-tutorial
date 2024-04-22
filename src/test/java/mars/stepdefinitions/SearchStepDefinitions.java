@@ -83,10 +83,6 @@ public class SearchStepDefinitions {
         assertThat(searchResultPanel.getMessage()).contains(expectedMessage);
     }
 
-    @And("enters a promo code {string}")
-    public void entersAPromoCode(String arg0) {
-    }
-
     @Then("he should be told the discount amount  is {int}%")
     public void heShouldBeToldTheDiscountAmountIs(int percentAmount) {
         assertThat(searchResultPanel.getMessage()).contains(percentAmount + "% discount");
