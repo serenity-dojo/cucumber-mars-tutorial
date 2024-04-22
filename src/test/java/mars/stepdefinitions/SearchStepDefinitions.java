@@ -2,6 +2,7 @@ package mars.stepdefinitions;
 
 import io.cucumber.java.DataTableType;
 import io.cucumber.java.ParameterType;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -80,5 +81,27 @@ public class SearchStepDefinitions {
     @Then("he should be told {string}")
     public void heShouldBeTold(String expectedMessage) {
         assertThat(searchResultPanel.getMessage()).contains(expectedMessage);
+    }
+
+    @And("enters a promo code {string}")
+    public void entersAPromoCode(String arg0) {
+    }
+
+    @Then("he should be told the discount amount  is {int}%")
+    public void heShouldBeToldTheDiscountAmountIs(int percentAmount) {
+        assertThat(searchResultPanel.getMessage()).contains(percentAmount + "% discount");
+    }
+
+    @Then("he should be told the code is invalid")
+    public void heShouldBeToldTheCodeIsInvalid() {
+        assertThat(searchResultPanel.getMessage()).contains("is not valid");
+    }
+
+    @When("he looks for an available flight using promo code {string}")
+    public void heLooksForAnAvailableFlightUsingPromoCode(String code) {
+        searchForm.selectDepartureMonth("July");
+        searchForm.selectReturnMonth("December (two years from now)");
+        searchForm.enterPromotionCode(code);
+        searchForm.performSearch();
     }
 }
