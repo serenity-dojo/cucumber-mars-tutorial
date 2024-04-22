@@ -14,6 +14,7 @@ public class SearchForm extends PageObject {
 
     private final By DEPARTURE_MONTH_DROPDOWN = By.id("departing");
     private final By RETURN_MONTH_DROPDOWN = By.id("returning");
+    private final By PROMO_CODE_INPUT = By.cssSelector("input[name='promotional_code']");
     private final By SEARCH_BUTTON = By.cssSelector("input[value='Search']");
 
     public WebElementState getDepartureMonthDropdown() {
@@ -52,5 +53,9 @@ public class SearchForm extends PageObject {
 
     public void performSearch() {
         $(SEARCH_BUTTON).click();
+    }
+
+    public void enterPromotionCode(String code) {
+        $(PROMO_CODE_INPUT).type(code);
     }
 }
